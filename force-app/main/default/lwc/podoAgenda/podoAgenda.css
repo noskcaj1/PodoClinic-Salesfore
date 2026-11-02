@@ -1,0 +1,131 @@
+:host {
+    display: block;
+    --cor-primaria: #0f766e;
+    --cor-borda: #e5e7eb;
+}
+
+.agenda {
+    padding: 1.5rem;
+    background: #f3f6f8;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1f2937;
+}
+
+.topo {
+    background: linear-gradient(135deg, var(--cor-primaria), #14b8a6);
+}
+
+.titulo span {
+    opacity: 0.9;
+    text-transform: capitalize;
+}
+
+.legenda {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1rem 0 0.75rem;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.dica {
+    margin-left: auto;
+    font-style: italic;
+}
+
+.ponto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.ponto-agendado { background: #f59e0b; }
+.ponto-confirmado { background: #10b981; }
+.ponto-concluido { background: #6366f1; }
+.ponto-nao_compareceu { background: #ef4444; }
+
+.grade {
+    overflow-x: auto;
+}
+
+.linha {
+    display: grid;
+    grid-template-columns: 64px repeat(7, minmax(120px, 1fr));
+    min-width: 900px;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 2px solid var(--cor-borda);
+}
+
+.dia-topo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.6rem 0;
+    color: #6b7280;
+    font-size: 0.8rem;
+}
+
+.dia-topo strong {
+    font-size: 1.3rem;
+    color: #1f2937;
+}
+
+.dia-hoje strong {
+    background: var(--cor-primaria);
+    color: #fff;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hora {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-align: right;
+}
+
+.celula {
+    min-height: 56px;
+    padding: 3px;
+    border-top: 1px solid var(--cor-borda);
+    border-left: 1px solid var(--cor-borda);
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.celula:hover {
+    background: #f0fdfa;
+}
+
+.evento {
+    margin-bottom: 3px;
+    padding: 4px 6px;
+    border-radius: 8px;
+    border-left: 4px solid;
+    font-size: 0.75rem;
+    line-height: 1.25;
+    cursor: pointer;
+}
+
+.evento span {
+    display: block;
+    opacity: 0.75;
+}
+
+.evento-agendado { background: #fef3c7; border-color: #f59e0b; color: #78350f; }
+.evento-confirmado { background: #d1fae5; border-color: #10b981; color: #064e3b; }
+.evento-concluido { background: #e0e7ff; border-color: #6366f1; color: #312e81; }
+.evento-nao_compareceu { background: #fee2e2; border-color: #ef4444; color: #7f1d1d; }

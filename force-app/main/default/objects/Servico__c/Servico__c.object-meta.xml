@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject>
+    <pluralLabel>Serviços</pluralLabel>
+    <fullName>Servico__c</fullName>
+    <description>Armazena os serviços oferecidos pelo consultório de podologia.</description>
+    <nameField>
+        <label>Nome do Serviço</label>
+        <type>Text</type>
+    </nameField>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableHistory>true</enableHistory>
+    <enableActivities>false</enableActivities>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>true</enableReports>
+    <sharingModel>ReadWrite</sharingModel>
+    <label>Serviço</label>
+    <deploymentStatus>Deployed</deploymentStatus>
+</CustomObject>

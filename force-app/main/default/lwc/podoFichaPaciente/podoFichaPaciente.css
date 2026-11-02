@@ -1,0 +1,129 @@
+:host {
+    display: block;
+    --cor-primaria: #0f766e;
+}
+
+.ficha {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #1f2937;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--cor-primaria), #14b8a6);
+    box-shadow: 0 10px 25px rgba(15, 118, 110, 0.25);
+}
+
+.avatar {
+    flex: none;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.dados {
+    flex: 1;
+}
+
+.dados h2 {
+    margin: 0 0 0.25rem;
+    font-size: 1.5rem;
+}
+
+.linha-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.25rem;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.obs {
+    margin: 0.6rem 0 0;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 10px;
+    font-size: 0.85rem;
+}
+
+.resumo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.resumo strong {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.vazio {
+    color: #6b7280;
+}
+
+.linha-tempo {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.25rem;
+    border-left: 3px solid #99f6e4;
+}
+
+.marco {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.marco:hover {
+    background: #f0fdfa;
+}
+
+.marco::before {
+    content: '';
+    position: absolute;
+    left: -1.8rem;
+    top: 1rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--cor-primaria);
+    border: 3px solid #fff;
+}
+
+.marco-topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.marco-topo span,
+.marco-sub {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.marco p {
+    margin: 0.25rem 0 0;
+}
+
+@media (max-width: 600px) {
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject>
+    <pluralLabel>Profissionais</pluralLabel>
+    <fullName>Profissional__c</fullName>
+    <description>Armazena os dados cadastrais dos profissionais que realizam atendimentos na clínica.</description>
+    <nameField>
+        <label>Nome do Profissional</label>
+        <type>Text</type>
+    </nameField>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableHistory>true</enableHistory>
+    <enableActivities>true</enableActivities>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>true</enableFeeds>
+    <enableReports>true</enableReports>
+    <sharingModel>Private</sharingModel>
+    <label>Profissional</label>
+    <deploymentStatus>Deployed</deploymentStatus>
+</CustomObject>

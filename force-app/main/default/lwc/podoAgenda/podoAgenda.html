@@ -1,0 +1,59 @@
+<template>
+    <div class="podo-bs agenda">
+        <header class="topo d-flex flex-wrap justify-content-between align-items-center gap-3 p-4 rounded-4 text-white shadow">
+            <div class="titulo">
+                <h1 class="h3 fw-bold mb-0">Agenda</h1>
+                <span>{tituloSemana}</span>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <select class="form-select rounded-pill fw-semibold w-auto" onchange={mudarProfissional}>
+                    <template for:each={profissionais} for:item="p">
+                        <option key={p.value} value={p.value}>{p.label}</option>
+                    </template>
+                </select>
+                <button class="btn btn-light rounded-pill fw-semibold" onclick={anterior}>‹</button>
+                <button class="btn btn-light rounded-pill fw-semibold" onclick={hoje}>Hoje</button>
+                <button class="btn btn-light rounded-pill fw-semibold" onclick={proxima}>›</button>
+            </div>
+        </header>
+
+        <template lwc:if={erro}>
+            <div class="alert alert-danger mt-3 mb-0" role="alert">{erro}</div>
+        </template>
+
+        <div class="legenda">
+            <span class="ponto ponto-agendado"></span> Agendado
+            <span class="ponto ponto-confirmado"></span> Confirmado
+            <span class="ponto ponto-concluido"></span> Concluído
+            <span class="ponto ponto-nao_compareceu"></span> Não compareceu
+            <span class="dica">Clique em um horário vazio para agendar.</span>
+        </div>
+
+        <div class="grade bg-white rounded-4 shadow-sm">
+            <div class="linha cabecalho">
+                <div class="hora"></div>
+                <template for:each={dias} for:item="d">
+                    <div key={d.key} class={d.classe}>
+                        <span>{d.nome}</span>
+                        <strong>{d.numero}</strong>
+                    </div>
+                </template>
+            </div>
+            <template for:each={linhas} for:item="l">
+                <div key={l.key} class="linha">
+                    <div class="hora">{l.rotulo}</div>
+                    <template for:each={l.celulas} for:item="c">
+                        <div key={c.key} class="celula" data-iso={c.iso} onclick={novoNaCelula}>
+                            <template for:each={c.itens} for:item="i">
+                                <div key={i.id} class={i.classe} data-id={i.id} onclick={abrirEvento}>
+                                    <strong>{i.hora}</strong> {i.paciente}
+                                    <span>{i.detalhe}</span>
+                                </div>
+                            </template>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,39 @@
+/* Layout, cores base e componentes vêm do Bootstrap isolado (.podo-bs). Aqui só o que é da marca. */
+:host {
+    display: block;
+}
+
+.painel {
+    padding: 1.5rem;
+    background: #f3f6f8;
+    color: #1f2937;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.hero {
+    background: linear-gradient(135deg, #20aeb3 0%, #0784d6 100%);
+}
+
+.hero-data {
+    text-transform: capitalize;
+}
+
+.cartao {
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cartao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1) !important;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.item-hora {
+    min-width: 64px;
+    background: #ccfbf1;
+    color: #115e59;
+    text-transform: capitalize;
+}

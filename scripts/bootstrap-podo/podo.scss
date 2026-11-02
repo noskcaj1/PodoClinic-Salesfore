@@ -1,0 +1,31 @@
+$enable-dark-mode: false;
+$enable-rfs: false;
+$font-family-sans-serif: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+$primary: #0f766e;
+$success: #10b981;
+$warning: #f59e0b;
+$danger: #ef4444;
+$info: #6366f1;
+$border-radius: 0.75rem;
+$border-radius-lg: 1rem;
+$enable-shadows: true;
+
+.podo-bs {
+  @import "node_modules/bootstrap/scss/functions";
+  @import "node_modules/bootstrap/scss/variables";
+  @import "node_modules/bootstrap/scss/variables-dark";
+  @import "node_modules/bootstrap/scss/maps";
+  @import "node_modules/bootstrap/scss/mixins";
+  @import "node_modules/bootstrap/scss/utilities";
+  @import "node_modules/bootstrap/scss/root";
+  @import "node_modules/bootstrap/scss/containers";
+  @import "node_modules/bootstrap/scss/grid";
+  @import "node_modules/bootstrap/scss/buttons";
+  @import "node_modules/bootstrap/scss/card";
+  @import "node_modules/bootstrap/scss/badge";
+  @import "node_modules/bootstrap/scss/list-group";
+  @import "node_modules/bootstrap/scss/alert";
+  @import "node_modules/bootstrap/scss/forms";
+  @import "node_modules/bootstrap/scss/helpers";
+  @import "node_modules/bootstrap/scss/utilities/api";
+}

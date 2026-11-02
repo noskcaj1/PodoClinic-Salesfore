@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField>
+    <fullName>CPF__c</fullName>
+    <type>Text</type>
+    <length>14</length>
+    <inlineHelpText>Informe o CPF no formato 000.000.000-00</inlineHelpText>
+    <required>false</required>
+    <unique>true</unique>
+    <externalId>false</externalId>
+    <description>Armazenamento de CPF do paciente no formato 000.000.000-00</description>
+    <label>CPF</label>
+    <securityClassification>Restricted</securityClassification>
+</CustomField>

@@ -1,0 +1,62 @@
+<template>
+    <div class="podo-bs ficha">
+        <template lwc:if={erro}>
+            <div class="alert alert-danger" role="alert">{erro}</div>
+        </template>
+
+        <template lwc:if={ficha}>
+            <section class="perfil d-flex align-items-center gap-3 p-4 rounded-4 text-white shadow">
+                <div class="avatar">{iniciais}</div>
+                <div class="dados">
+                    <h2>{paciente.Name}</h2>
+                    <p class="linha-info">
+                        <span lwc:if={idade}>🎂 {idade}</span>
+                        <span lwc:if={paciente.Telefone__c}>📞 {paciente.Telefone__c}</span>
+                        <span lwc:if={paciente.Email__c}>✉️ {paciente.Email__c}</span>
+                        <span lwc:if={local}>📍 {local}</span>
+                    </p>
+                    <p lwc:if={paciente.Observacoes__c} class="obs">{paciente.Observacoes__c}</p>
+                </div>
+                <div class="resumo">
+                    <span class={statusClasse}>{statusTexto}</span>
+                    <strong>{total}</strong>
+                    <span>atendimentos</span>
+                </div>
+            </section>
+
+            <section class="card border-0 shadow-sm mt-3" lwc:if={temProximos}>
+              <div class="card-body">
+                <h3 class="h6 fw-bold">Próximos agendamentos</h3>
+                <template for:each={proximos} for:item="p">
+                    <div key={p.id} class="d-flex align-items-center gap-3 py-2 border-bottom">
+                        <strong>{p.quando}</strong>
+                        <span class="flex-grow-1 text-secondary">{p.detalhe}</span>
+                        <span class="badge rounded-pill text-bg-warning">{p.status}</span>
+                    </div>
+                </template>
+              </div>
+            </section>
+
+            <section class="card border-0 shadow-sm mt-3">
+              <div class="card-body">
+                <h3 class="h6 fw-bold mb-3">Histórico de atendimentos</h3>
+                <p lwc:if={semAtendimentos} class="text-secondary mb-0">Nenhum atendimento registrado ainda.</p>
+                <ol class="linha-tempo">
+                    <template for:each={atendimentos} for:item="a">
+                        <li key={a.id} class="marco" data-id={a.id} onclick={abrirAtendimento}>
+                            <div class="marco-topo">
+                                <strong>{a.servico}</strong>
+                                <span>{a.data}</span>
+                            </div>
+                            <p class="marco-sub">{a.numero} <span lwc:if={a.profissional}>• {a.profissional}</span></p>
+                            <p lwc:if={a.queixa}><b>Queixa:</b> {a.queixa}</p>
+                            <p lwc:if={a.procedimento}><b>Procedimento:</b> {a.procedimento}</p>
+                            <p lwc:if={a.orientacoes}><b>Orientações:</b> {a.orientacoes}</p>
+                        </li>
+                    </template>
+                </ol>
+              </div>
+            </section>
+        </template>
+    </div>
+</template>

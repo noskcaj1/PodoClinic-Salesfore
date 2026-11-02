@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject>
+    <pluralLabel>Agendamentos</pluralLabel>
+    <fullName>Agendamento__c</fullName>
+    <description>Armazena os agendamentos realizados no consultório de podologia.</description>
+    <nameField>
+        <label>Número do Agendamento</label>
+        <type>AutoNumber</type>
+        <displayFormat>AG-{00000}</displayFormat>
+    </nameField>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableHistory>true</enableHistory>
+    <enableActivities>true</enableActivities>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>true</enableReports>
+    <sharingModel>Private</sharingModel>
+    <label>Agendamento</label>
+    <deploymentStatus>Deployed</deploymentStatus>
+</CustomObject>

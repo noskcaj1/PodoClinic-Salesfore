@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject>
+    <pluralLabel>Atendimentos</pluralLabel>
+    <fullName>Atendimento__c</fullName>
+    <description>Registra os atendimentos e a evolução clínica dos pacientes.</description>
+    <nameField>
+        <label>Número do Atendimento</label>
+        <type>AutoNumber</type>
+        <displayFormat>AT-{00000}</displayFormat>
+    </nameField>
+    <enableBulkApi>true</enableBulkApi>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <enableHistory>true</enableHistory>
+    <enableActivities>true</enableActivities>
+    <enableSearch>true</enableSearch>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>true</enableReports>
+    <sharingModel>Private</sharingModel>
+    <label>Atendimento</label>
+    <deploymentStatus>Deployed</deploymentStatus>
+</CustomObject>

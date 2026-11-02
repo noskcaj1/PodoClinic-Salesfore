@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#0176D3</headerColor>
+        <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
+    </brand>
+    <description>Gestão do consultório de podologia: pacientes, agenda e atendimentos.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <label>PodoClinic</label>
+    <navType>Standard</navType>
+    <tabs>Painel_PodoClinic</tabs>
+    <tabs>Agenda_PodoClinic</tabs>
+    <tabs>Agendamento__c</tabs>
+    <tabs>Paciente__c</tabs>
+    <tabs>Atendimento__c</tabs>
+    <tabs>Profissional__c</tabs>
+    <tabs>Servico__c</tabs>
+    <uiType>Lightning</uiType>
+    <setupExperience>all</setupExperience>
+</CustomApplication>
